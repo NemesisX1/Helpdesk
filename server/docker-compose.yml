@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  server-app:
+    container_name: server-app
+    restart: always
+    build: .
+    env_file: ./.env
+    ports:
+      - "8081:8081"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
