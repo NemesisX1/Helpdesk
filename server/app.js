@@ -5,14 +5,10 @@ const logger = require("morgan");
 const cors = require("cors");
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger-output.json');
-const mailService = require('./services/mail.service');
 require('dotenv').config()
 
 const mongoose = require("mongoose");
 const User = require('./models/users.model')
-
-// const swaggerUi = require('swagger-ui-express')
-// const swaggerFile = require('./swagger_output.json')
 
 const port = process.env.PORT || 8081;
 const host = "0.0.0.0";
