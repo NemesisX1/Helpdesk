@@ -22,7 +22,7 @@ function Comment(props) {
           From <a href={'mailto:' + props.sender}>{props.sender}</a> - {date}
         </Typography>
         <Divider />
-        <CardMedia component="img" image={props.pictureUrl} alt="" />
+        <CardMedia component="img" style={{maxHeight: '100px'}} image={props.pictureUrl} alt="" />
       </Item>
     </Container>
   );
